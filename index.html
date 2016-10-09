@@ -5,13 +5,23 @@
     <script src="js/vendor/angular.min.js"></script>
     <script src="js/vendor/angular-route.min.js"></script>
 </head>
-    <body>
-        <div class="main">
-            <div class="container">
-                <div class="head">
-                    <h2>Suggestion Box</h2>
+<body ng-app="SuggestionBox">
+    <div class="main" ng-controller="SuggestionBoxController">
+        <div class="container">
+            <div class="head">
+                <h2>Suggestion Box</h2>
+            </div>
+            <div class="Suggestion Box" >
+                <div ng-repeat="suggestion in suggestions">
+                    {{suggestion.title}}
+                    </br>
                 </div>
+                <input type="text" id="textbox"></input>
+                <button ng-click="addSuggestion()">Submit</input>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers/SuggestionBoxController.js"></script>
+</body>
