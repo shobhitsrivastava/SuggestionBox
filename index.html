@@ -1,6 +1,7 @@
 <!doctype HTML>
 <html>
 <head>
+    <meta charset="UTF-8">
     <link href="css/main.css" rel="stylesheet" />
     <script src="js/vendor/angular.min.js"></script>
     <script src="js/vendor/angular-route.min.js"></script>
@@ -12,15 +13,10 @@
                 <h2>Suggestion Box</h2>
             </div>
             <div class="Suggestion Box" >
-                <div ng-repeat="suggestion in suggestions">
-                    <suggestion info="suggestion"></suggestion>
-                </div>
-                <input type="text" id="textbox"></input>
-                <button ng-click="addSuggestion()">Submit</input>
+                <div ng-view></div>
             </div>
         </div>
     </div>
     <script src="js/app.js"></script>
     <script src="js/controllers/SuggestionBoxController.js"></script>
-    <script src="js/directives/SuggestionDirective.js"></script>
 </body>

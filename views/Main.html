@@ -1,0 +1,7 @@
+<div class="suggestion" ng-repeat="suggestion in suggestions | orderBy:'-upvotes'">
+    {{suggestion.title}}
+    <br></br>
+    {{suggestion.upvotes}} <span ng-click="upvote(suggestion)"> ^ </span>
+</div>
+<input type="text" id="textbox"></input>
+<button ng-click="addSuggestion()">Submit</input>

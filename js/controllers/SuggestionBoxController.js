@@ -20,7 +20,10 @@ app.controller("SuggestionBoxController", ["$scope", function($scope) {
             "comments": [],
             "upvotes" : 0
         };
-        console.log(newSuggestion.title);
         $scope.suggestions.push(newSuggestion);
+    };
+    $scope.upvote = function(suggestion) {
+        console.log("hello");
+        suggestion.upvotes++;
     }
 }]);
