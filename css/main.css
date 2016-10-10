@@ -8,3 +8,7 @@
 h2 {
     text-align: center;
 }
+.suggestion{
+    width: 100%;
+    border: solid black;
+}
