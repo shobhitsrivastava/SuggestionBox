@@ -2,6 +2,10 @@
     {{suggestion.title}}
     <br></br>
     {{suggestion.upvotes}} <span ng-click="upvote(suggestion)"> ^ </span>
+    <br></br>
+    <a href="#/{{$index}}">
+    Comments({{suggestion.comments.length}})
+    </a>
 </div>
 <input type="text" id="textbox"></input>
 <button ng-click="addSuggestion()">Submit</input>

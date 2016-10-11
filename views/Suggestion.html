@@ -1,0 +1,10 @@
+<br></br>
+<h3>{{suggestion.title}}</h3>
+<br></br>
+<div ng-repeat="comment in suggestion.comments">
+    <div class="comment">{{comment.body}}</div>
+</div>
+<input type="text" id="textbox"></input>
+<button ng-click="addComment()">Comment</button>
+<br></br>
+<a href="#/"><<<</a>

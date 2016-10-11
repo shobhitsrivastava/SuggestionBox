@@ -2,7 +2,12 @@ app.controller("SuggestionBoxController", ["$scope", function($scope) {
     $scope.suggestions = [
         {
             "title": "We need more milk.",
-            "comments": [],
+            "comments": [{
+                "body": "Hello more milk"
+            }, {
+                "body": "A lot more milk"
+            }
+            ],
             "upvotes" : 0
         }, {
             "title": "There is a hurricane coming.",
@@ -23,7 +28,6 @@ app.controller("SuggestionBoxController", ["$scope", function($scope) {
         $scope.suggestions.push(newSuggestion);
     };
     $scope.upvote = function(suggestion) {
-        console.log("hello");
-        suggestion.upvotes++;
+        suggestion.upvotes += 1;
     }
 }]);
