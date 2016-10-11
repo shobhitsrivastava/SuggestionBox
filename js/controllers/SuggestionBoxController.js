@@ -1,25 +1,7 @@
-app.controller("SuggestionBoxController", ["$scope", function($scope) {
-    $scope.suggestions = [
-        {
-            "title": "We need more milk.",
-            "comments": [{
-                "body": "Hello more milk"
-            }, {
-                "body": "A lot more milk"
-            }
-            ],
-            "upvotes" : 0
-        }, {
-            "title": "There is a hurricane coming.",
-            "comments": [],
-            "upvotes" : 0
-        }, {
-            "title": "Out of pizza.",
-            "comments": [],
-            "upvotes" : 0
-        }
-    ];
-    $scope.addSuggestion = function() {
+app.controller("SuggestionBoxController", ["$scope", "SuggestionsService", function ($scope, SuggestionsService) {
+    'use strict';
+    $scope.suggestions = SuggestionsService.posts;
+    $scope.addSuggestion = function () {
         var newSuggestion = {
             "title": document.getElementById("textbox").value,
             "comments": [],
@@ -27,7 +9,7 @@ app.controller("SuggestionBoxController", ["$scope", function($scope) {
         };
         $scope.suggestions.push(newSuggestion);
     };
-    $scope.upvote = function(suggestion) {
+    $scope.upvote = function (suggestion) {
         suggestion.upvotes += 1;
-    }
+    };
 }]);
