@@ -3,9 +3,10 @@ app.controller("SuggestionBoxController", ["$scope", "SuggestionsService", funct
     $scope.suggestions = SuggestionsService.posts;
     $scope.addSuggestion = function () {
         var newSuggestion = {
-            "title": document.getElementById("textbox").value,
-            "comments": [],
-            "upvotes" : 0
+            title: document.getElementById("textbox").value,
+            comments: [],
+            upvotes : 0,
+            id: $scope.suggestions.length
         };
         $scope.suggestions.push(newSuggestion);
     };

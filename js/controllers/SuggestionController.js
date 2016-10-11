@@ -5,5 +5,5 @@ app.controller("SuggestionController", ["$scope", "$routeParams", function($scop
             "body": document.getElementById("textbox").value
         };
         $scope.suggestion.comments.push(newComment);
-    }
+    };
 }]);
